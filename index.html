@@ -45,17 +45,16 @@
   .navicons{justify-self:end;display:flex;gap:20px;font-family:'Jost',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.14em}
   .navicons a:hover{color:var(--gold)}
 
-  /* hero */
-  .hero{position:relative;min-height:88vh;display:flex;align-items:center;color:var(--ivory);
-    background:linear-gradient(180deg,rgba(20,16,11,.5),rgba(20,16,11,.72)),linear-gradient(135deg,#2a2118,#15110b);
-    background-image:linear-gradient(90deg,rgba(20,16,11,.78),rgba(20,16,11,.35) 60%,rgba(20,16,11,.25)),url('https://images.unsplash.com/photo-1605980776566-0486c3ac7617?q=80&w=1600&auto=format&fit=crop');
-    background-size:cover;background-position:center}
-  .hero .inner{max-width:var(--max);margin:0 auto;padding:0 28px;width:100%}
-  .hero .label{color:var(--gold-l);margin-bottom:22px}
-  .hero h1{font-size:clamp(46px,7vw,90px);font-weight:400;max-width:13ch;margin-bottom:22px}
-  .hero h1 em{font-style:italic;color:var(--gold-l)}
-  .hero p{font-family:'Jost',sans-serif;font-size:17px;font-weight:300;max-width:440px;color:#e8ded0;margin-bottom:34px}
-  .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  /* hero — split: noir text panel + portrait */
+  .hero{display:grid;grid-template-columns:45% 55%;min-height:86vh}
+  .hero-text{background:var(--noir);color:var(--ivory);display:flex;flex-direction:column;justify-content:center;padding:0 clamp(28px,5vw,72px)}
+  .hero-text .label{color:var(--gold-l);margin-bottom:22px}
+  .hero-text h1{font-size:clamp(42px,5vw,78px);font-weight:400;margin-bottom:22px}
+  .hero-text h1 em{font-style:italic;color:var(--gold-l)}
+  .hero-text p{font-family:'Jost',sans-serif;font-size:16px;font-weight:300;max-width:420px;color:#d8cdbd;margin-bottom:32px}
+  .hero-text .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-img{background:#1a1610;background-image:url('https://images.unsplash.com/photo-1632765854612-9b02b6ec2b15?q=80&w=1200&auto=format&fit=crop');
+    background-size:cover;background-position:50% 18%}
 
   /* statement */
   .statement{text-align:center;padding:90px 0}
@@ -82,23 +81,25 @@
   .t3{background:linear-gradient(160deg,#3f3527,#211a12)} .t4{background:linear-gradient(160deg,#574234,#2a1d12)}
   .t5{background:linear-gradient(160deg,#473b2c,#241b11)} .t6{background:linear-gradient(160deg,#5c4632,#2c2014)}
 
-  /* signature products */
+  /* signature products — elegant tonal tiles (no stock photos) */
   .signature{padding:96px 0}
   .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
   .pc{text-align:center}
-  .pc .pim{aspect-ratio:3/4;background:var(--paper) center/cover no-repeat;margin-bottom:16px;position:relative;overflow:hidden}
-  .pc .pim::after{content:"";position:absolute;inset:0;border:1px solid rgba(177,137,78,.0);transition:.3s}
-  .pc:hover .pim::after{border-color:rgba(177,137,78,.45);inset:10px}
-  .pc .bdg{position:absolute;top:14px;left:50%;transform:translateX(-50%);font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);background:rgba(23,19,13,.6);padding:5px 12px;z-index:1}
+  .pc .pim{aspect-ratio:3/4;margin-bottom:16px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .pc .pim::before{content:"✦";font-family:'Cormorant Garamond',serif;font-size:38px;color:rgba(202,168,106,.55)}
+  .pc .pim::after{content:"";position:absolute;inset:0;border:1px solid rgba(202,168,106,0);transition:.3s}
+  .pc:hover .pim::after{border-color:rgba(202,168,106,.5);inset:10px}
+  .pc .bdg{position:absolute;top:14px;left:50%;transform:translateX(-50%);font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);background:rgba(23,19,13,.55);padding:5px 12px;z-index:1}
+  .s1{background:linear-gradient(160deg,#4a3a2a,#241a10)} .s2{background:linear-gradient(160deg,#5a4636,#2d2014)}
+  .s3{background:linear-gradient(160deg,#3f3527,#211a12)} .s4{background:linear-gradient(160deg,#574234,#2a1d12)}
   .pc .pcat{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
   .pc h3{font-size:21px;font-weight:500;margin:6px 0 4px;line-height:1.25}
   .pc .pr{font-family:'Jost',sans-serif;font-size:14px;letter-spacing:.05em;color:var(--gold)}
   .center-cta{text-align:center;margin-top:54px}
 
   /* lifestyle band */
-  .life{position:relative;min-height:62vh;display:flex;align-items:center;color:var(--ivory);
-    background:linear-gradient(90deg,rgba(20,16,11,.74),rgba(20,16,11,.3));
-    background-image:linear-gradient(90deg,rgba(20,16,11,.7),rgba(20,16,11,.32)),url('https://images.unsplash.com/photo-1522337094846-8a818192de1f?q=80&w=1600&auto=format&fit=crop');
+  .life{position:relative;min-height:62vh;display:flex;align-items:center;color:var(--ivory);background:#1a1610;
+    background-image:linear-gradient(90deg,rgba(20,16,11,.82),rgba(20,16,11,.4) 60%,rgba(20,16,11,.2)),url('https://images.unsplash.com/photo-1527203561188-dae1bc1a417f?q=80&w=1500&auto=format&fit=crop');
     background-size:cover;background-position:center}
   .life .inner{max-width:var(--max);margin:0 auto;padding:64px 28px;width:100%}
   .life .label{color:var(--gold-l);margin-bottom:18px}
@@ -117,8 +118,7 @@
   /* visit */
   .visit{padding:96px 0}
   .vgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-  .vimg{aspect-ratio:4/3;background:linear-gradient(135deg,#e5dac6,#cdbf9f);background-size:cover;background-position:center;
-    background-image:linear-gradient(135deg,rgba(229,218,198,.35),rgba(205,191,159,.35)),url('https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1100&auto=format&fit=crop')}
+  .vimg{aspect-ratio:4/3;background:#e5dac6;background-image:url('https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=1000&auto=format&fit=crop');background-size:cover;background-position:50% 30%}
   .visit .label{margin-bottom:16px}
   .visit h2{font-size:clamp(30px,4vw,46px);font-weight:400;margin-bottom:16px}
   .visit p{color:var(--muted);max-width:440px;margin-bottom:22px;font-size:16px}
@@ -148,11 +148,13 @@
   .demo-flag{position:fixed;bottom:14px;left:14px;z-index:30;background:var(--noir);color:#cfc4b0;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:8px 13px;border:1px solid rgba(202,168,106,.3)}
 
   @media(max-width:900px){
-    .nav{grid-template-columns:1fr auto;height:64px}.menu{display:none}
-    .navicons{display:none}
+    .nav{grid-template-columns:1fr auto;height:64px}.menu{display:none}.navicons{display:none}
+    .hero{grid-template-columns:1fr;min-height:auto}
+    .hero-img{order:-1;min-height:50vh}
+    .hero-text{padding:48px 28px}
     .cgrid{grid-template-columns:1fr 1fr;gap:14px}.pgrid{grid-template-columns:1fr 1fr;gap:18px}
     .erow{grid-template-columns:1fr 1fr;gap:30px 20px}.vgrid{grid-template-columns:1fr;gap:28px}
-    .fgrid{grid-template-columns:1fr 1fr}.hero{min-height:78vh}
+    .fgrid{grid-template-columns:1fr 1fr}
   }
   @media(max-width:480px){ .cgrid,.pgrid{grid-template-columns:1fr 1fr;gap:11px} .news form{flex-direction:column} .news button{padding:14px} }
 </style>
@@ -176,7 +178,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="inner">
+  <div class="hero-text">
     <div class="label">The wig atelier</div>
     <h1>Your crown, <em>elevated.</em></h1>
     <p>Premium wigs, bundles, and salon-grade hair care for the woman who never blends in. Hand-selected in Chattanooga, delivered across the country.</p>
@@ -185,6 +187,7 @@
       <a href="#signature" class="btn line">Signature pieces</a>
     </div>
   </div>
+  <div class="hero-img" role="img" aria-label="Model wearing a natural afro"></div>
 </section>
 
 <!-- STATEMENT -->
@@ -219,19 +222,19 @@
   </div>
   <div class="pgrid">
     <article class="pc">
-      <div class="pim" style="background-image:url('https://images.unsplash.com/photo-1595475207225-428b62bda831?q=80&w=600&auto=format&fit=crop')"><span class="bdg">Bestseller</span></div>
+      <div class="pim s1"><span class="bdg">Bestseller</span></div>
       <div class="pcat">Wigs</div><h3>Outre HD Lace Front Wig — Body Wave</h3><div class="pr">$54.99</div>
     </article>
     <article class="pc">
-      <div class="pim" style="background-image:url('https://images.unsplash.com/photo-1626783416760-29b5e22a0e3f?q=80&w=600&auto=format&fit=crop')"></div>
+      <div class="pim s2"></div>
       <div class="pcat">Bundles</div><h3>Brazilian Virgin Hair Bundles — Straight</h3><div class="pr">From $89.99</div>
     </article>
     <article class="pc">
-      <div class="pim" style="background-image:url('https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=600&auto=format&fit=crop')"><span class="bdg">New</span></div>
+      <div class="pim s3"><span class="bdg">New</span></div>
       <div class="pcat">Hair Care</div><h3>Argan Repair &amp; Shine Hair Care Set</h3><div class="pr">$42.00</div>
     </article>
     <article class="pc">
-      <div class="pim" style="background-image:url('https://images.unsplash.com/photo-1583001931096-959e9a1a6223?q=80&w=600&auto=format&fit=crop')"></div>
+      <div class="pim s4"></div>
       <div class="pcat">Lashes</div><h3>Mink 3D Volume Lashes — Reusable</h3><div class="pr">$18.00</div>
     </article>
   </div>
@@ -260,7 +263,7 @@
 
 <!-- VISIT -->
 <section class="visit"><div class="wrap vgrid">
-  <div class="vimg"></div>
+  <div class="vimg" role="img" aria-label="Beauty portrait"></div>
   <div>
     <div class="label">Visit the atelier</div>
     <h2>Find us in Chattanooga</h2>
