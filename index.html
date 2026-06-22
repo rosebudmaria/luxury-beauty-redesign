@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Beauty Supply | Wigs, Braiding Hair & Barber Supplies — Chattanooga, TN</title>
+<meta name="description" content="Shop wigs, braiding hair, bundles, lashes, hair tools, barber supplies, and perfumes at Luxury Beauty Supply in Chattanooga, TN. Shop in-store or online with nationwide shipping, free over $59.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fcf8f4; --card:#fff; --ink:#251a21; --muted:#897c83; --line:#efe4ea;
+    --berry:#8a2c52; --berry-dk:#6c1f40; --blush:#f8ebf1; --gold:#c6a15b; --r:16px; --max:1200px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.1;font-weight:700}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--berry);color:#fff;border:none;border-radius:999px;padding:14px 28px;font-weight:600;font-size:15px;transition:.15s}
+  .btn:hover{background:var(--berry-dk);transform:translateY(-1px)}
+  .btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--berry);color:var(--berry)}
+
+  /* announce + header */
+  .announce{background:var(--berry);color:#fff;text-align:center;font-size:12.5px;padding:9px;letter-spacing:.03em}
+  .announce b{color:#f2d9a0;font-weight:600}
+  header{position:sticky;top:0;z-index:40;background:rgba(252,248,244,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;gap:20px;height:70px}
+  .brand{font-family:'Playfair Display',serif;font-weight:800;font-size:24px;letter-spacing:.01em;line-height:1;color:var(--berry)}
+  .brand small{display:block;font-family:'Inter';font-weight:600;font-size:9px;letter-spacing:.32em;color:var(--muted);text-transform:uppercase;margin-top:3px}
+  .menu{display:flex;gap:22px;list-style:none;margin-left:8px;font-size:14.5px;font-weight:500}
+  .menu a:hover{color:var(--berry)}
+  .navicons{margin-left:auto;display:flex;align-items:center;gap:16px;font-size:14px;font-weight:600}
+  .navicons .ic{display:inline-flex;align-items:center;gap:6px}
+  .navicons .ic:hover{color:var(--berry)}
+
+  /* hero */
+  .hero{display:grid;grid-template-columns:1.04fr .96fr;min-height:520px}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:60px 56px 60px 0}
+  .eyebrow{color:var(--berry);font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold)}
+  .hero h1{font-size:clamp(36px,5vw,58px);margin-bottom:20px}
+  .hero h1 em{font-style:italic;color:var(--berry)}
+  .hero p{font-size:18px;color:var(--muted);max-width:460px;margin-bottom:30px}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-trust{margin-top:24px;font-size:13px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap}
+  .hero-trust b{color:var(--ink)}
+  .hero-img{background:linear-gradient(150deg,#b14a72,#5c1738);background-size:cover;background-position:center;
+    background-image:linear-gradient(160deg,rgba(108,31,64,.18),rgba(108,31,64,.5)),url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1100&auto=format&fit=crop');
+    display:flex;align-items:flex-end;padding:26px}
+  .hero-tag{background:rgba(255,255,255,.94);border-radius:12px;padding:12px 16px;font-size:13.5px;max-width:230px}
+  .hero-tag b{display:block;font-family:'Playfair Display',serif;font-size:15px;margin-bottom:2px}
+
+  /* section heads */
+  section{padding:64px 0}
+  .shead{text-align:center;max-width:620px;margin:0 auto 38px}
+  .shead .eyebrow{justify-content:center}
+  .shead .eyebrow::after{content:"";width:26px;height:1px;background:var(--gold)}
+  .shead h2{font-size:clamp(26px,3.4vw,38px);margin-bottom:10px}
+  .shead p{color:var(--muted);font-size:16px}
+
+  /* categories */
+  .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .cat{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:3/4;display:flex;align-items:flex-end;padding:18px;color:#fff;background:var(--berry)}
+  .cat::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,15,28,.05),rgba(40,15,28,.62))}
+  .cat span{position:relative;z-index:1;font-family:'Playfair Display',serif;font-size:19px;font-weight:700;line-height:1.15}
+  .cat small{position:relative;z-index:1;display:block;font-family:'Inter';font-weight:600;font-size:11px;letter-spacing:.06em;opacity:.85;text-transform:uppercase;margin-top:3px}
+  .cat:hover::after{background:linear-gradient(180deg,rgba(40,15,28,.05),rgba(108,31,64,.72))}
+  .c1{background:linear-gradient(160deg,#9c3a63,#6c1f40)} .c2{background:linear-gradient(160deg,#7c4a8f,#3f2350)}
+  .c3{background:linear-gradient(160deg,#b06a4e,#6e3a2b)} .c4{background:linear-gradient(160deg,#3f5a6e,#22323f)}
+  .c5{background:linear-gradient(160deg,#5a7a5f,#2f4533)} .c6{background:linear-gradient(160deg,#3a3a42,#1c1c22)}
+  .c7{background:linear-gradient(160deg,#c08a5a,#7a4f2c)} .c8{background:linear-gradient(160deg,#a8527a,#5c1738)}
+
+  /* products */
+  .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .pc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.18s;display:flex;flex-direction:column}
+  .pc:hover{box-shadow:0 14px 34px rgba(108,31,64,.12);transform:translateY(-3px)}
+  .pc .pim{aspect-ratio:1/1;background:#f1e9ed center/cover no-repeat;position:relative}
+  .pc .bdg{position:absolute;top:10px;left:10px;background:var(--berry);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:4px 9px;border-radius:6px;text-transform:uppercase}
+  .pc .pb{padding:15px;display:flex;flex-direction:column;gap:5px;flex:1}
+  .pc .pcat{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  .pc h3{font-family:'Inter',sans-serif;font-size:14.5px;font-weight:600;line-height:1.3}
+  .pc .st{color:var(--gold);font-size:13px;letter-spacing:1px}
+  .pc .st small{color:var(--muted);font-size:12px;letter-spacing:0}
+  .pc .pf{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:10px}
+  .pc .pr{font-weight:700;font-size:16px}
+  .pc .add{background:var(--blush);color:var(--berry);border:none;border-radius:999px;padding:8px 14px;font-size:12.5px;font-weight:700}
+  .pc .add:hover{background:var(--berry);color:#fff}
+
+  /* value strip */
+  .values{background:var(--blush)}
+  .vrow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .v{display:flex;gap:12px;align-items:flex-start}
+  .v .vi{font-size:22px;flex:none}
+  .v b{display:block;font-size:14.5px}
+  .v span{font-size:13px;color:var(--muted)}
+
+  /* local */
+  .local{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .local .lmap{border-radius:var(--r);min-height:320px;background:linear-gradient(135deg,#e7dbe3,#cdb6c4);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;color:var(--berry-dk);font-weight:600;
+    background-image:linear-gradient(135deg,rgba(231,219,227,.6),rgba(205,182,196,.6)),url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000&auto=format&fit=crop');background-size:cover;background-position:center}
+  .local h2{font-size:clamp(26px,3.2vw,36px);margin-bottom:14px}
+  .local p{color:var(--muted);font-size:16px;margin-bottom:14px;max-width:440px}
+  .infoline{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;font-size:14.5px}
+  .infoline .ii{color:var(--berry);flex:none}
+  .infoline b{font-weight:600}
+
+  /* brands */
+  .brands{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+  .brow{display:flex;align-items:center;justify-content:center;gap:38px;flex-wrap:wrap;font-family:'Playfair Display',serif;font-weight:700;font-size:20px;color:#c3b3bc}
+
+  /* newsletter */
+  .news{text-align:center}
+  .news form{display:flex;gap:10px;max-width:440px;margin:18px auto 0}
+  .news input{flex:1;border:1px solid var(--line);border-radius:999px;padding:14px 18px;font-size:15px;font-family:inherit;background:#fff}
+
+  footer{background:#2a1a22;color:#c9b9c1;padding:54px 0 30px}
+  .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px;margin-bottom:34px}
+  footer .brand{color:#fff} footer .brand small{color:#a78c9a}
+  footer h4{color:#fff;font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+  footer ul{list-style:none} footer li{margin-bottom:9px;font-size:14px}
+  footer a:hover{color:#fff}
+  .fbar{border-top:1px solid rgba(255,255,255,.14);padding-top:20px;font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  .demo-flag{position:fixed;bottom:14px;left:14px;z-index:30;background:#2a1a22;color:#fff;font-size:11.5px;padding:7px 12px;border-radius:999px;opacity:.85}
+
+  @media(max-width:900px){
+    .hero{grid-template-columns:1fr}.hero-copy{padding:48px 0 36px}.hero-img{min-height:300px}
+    .cats{grid-template-columns:repeat(2,1fr)}.pgrid{grid-template-columns:repeat(2,1fr)}
+    .vrow{grid-template-columns:1fr 1fr}.local{grid-template-columns:1fr;gap:24px}
+    .menu{display:none}.fgrid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:480px){ .cats,.pgrid{grid-template-columns:1fr 1fr;gap:11px} .navicons .ic span{display:none} }
+</style>
+</head>
+<body>
+
+<div class="announce">✦ Free shipping on U.S. orders over <b>$59</b> · Local pickup in Chattanooga, TN ✦</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand">Luxury Beauty Supply<small>Chattanooga, TN</small></a>
+    <ul class="menu">
+      <li><a href="#cats">Wigs</a></li>
+      <li><a href="#cats">Braiding Hair</a></li>
+      <li><a href="#cats">Bundles</a></li>
+      <li><a href="#cats">Lashes</a></li>
+      <li><a href="#cats">Barber</a></li>
+      <li><a href="#cats">Perfumes</a></li>
+    </ul>
+    <div class="navicons">
+      <a class="ic" href="#">🔎 <span>Search</span></a>
+      <a class="ic" href="#">♥ <span>Saved</span></a>
+      <a class="ic" href="#">🛍 <span>Bag</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="wrap hero" style="padding-bottom:0">
+  <div class="hero-copy">
+    <div class="eyebrow">Chattanooga's beauty supply</div>
+    <h1>Wigs, bundles &amp; braiding hair, <em>done right.</em></h1>
+    <p>Quality hair, lashes, barber tools, and beauty essentials from your local Chattanooga store, now shipping nationwide.</p>
+    <div class="hero-cta">
+      <a href="#products" class="btn">Shop bestsellers</a>
+      <a href="#cats" class="btn ghost">Shop by category</a>
+    </div>
+    <div class="hero-trust"><span><b>Authentic</b> name brands</span><span><b>Free shipping</b> over $59</span><span><b>4.8★</b> in-store rated</span></div>
+  </div>
+  <div class="hero-img"><div class="hero-tag"><b>New wigs in weekly</b>Lace fronts, HD lace &amp; headband wigs</div></div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="cats">
+  <div class="wrap">
+    <div class="shead">
+      <div class="eyebrow">Shop by category</div>
+      <h2>Everything for hair &amp; beauty</h2>
+      <p>From lace fronts to clippers, find exactly what you came for.</p>
+    </div>
+    <div class="cats">
+      <a class="cat c1" href="#"><div><span>Wigs</span><small>Lace front · HD · headband</small></div></a>
+      <a class="cat c2" href="#"><div><span>Braiding Hair</span><small>Pre-stretched · jumbo</small></div></a>
+      <a class="cat c3" href="#"><div><span>Bundles &amp; Closures</span><small>Body wave · straight</small></div></a>
+      <a class="cat c4" href="#"><div><span>Lashes</span><small>Cluster · strip · mink</small></div></a>
+      <a class="cat c5" href="#"><div><span>Hair Tools</span><small>Flat irons · dryers</small></div></a>
+      <a class="cat c6" href="#"><div><span>Barber Supplies</span><small>Clippers · trimmers</small></div></a>
+      <a class="cat c7" href="#"><div><span>Perfumes</span><small>Body &amp; fragrance</small></div></a>
+      <a class="cat c8" href="#"><div><span>Beauty &amp; Skincare</span><small>Care &amp; essentials</small></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead">
+      <div class="eyebrow">Bestsellers</div>
+      <h2>Customer favorites this month</h2>
+      <p>Real titles, rewritten the way shoppers actually search.</p>
+    </div>
+    <div class="pgrid">
+      <article class="pc">
+        <div class="pim" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=600&auto=format&fit=crop')"><span class="bdg">Bestseller</span></div>
+        <div class="pb"><span class="pcat">Barber Supplies</span><h3>Andis GTX-Z Cordless T-Outliner Trimmer</h3>
+          <div class="st">★★★★★ <small>4.8 (212)</small></div>
+          <div class="pf"><span class="pr">$89.99</span><button class="add">Add</button></div></div>
+      </article>
+      <article class="pc">
+        <div class="pim" style="background-image:url('https://images.unsplash.com/photo-1595475207225-428b62bda831?q=80&w=600&auto=format&fit=crop')"><span class="bdg">New</span></div>
+        <div class="pb"><span class="pcat">Wigs</span><h3>Outre Synthetic Lace Front Wig — Body Wave</h3>
+          <div class="st">★★★★★ <small>4.6 (88)</small></div>
+          <div class="pf"><span class="pr">$54.99</span><button class="add">Add</button></div></div>
+      </article>
+      <article class="pc">
+        <div class="pim" style="background-image:url('https://images.unsplash.com/photo-1626783416763-67a92e5e7266?q=80&w=600&auto=format&fit=crop')"></div>
+        <div class="pb"><span class="pcat">Braiding Hair</span><h3>X-Pression Pre-Stretched Braiding Hair (3-Pack)</h3>
+          <div class="st">★★★★★ <small>4.8 (341)</small></div>
+          <div class="pf"><span class="pr">$12.99</span><button class="add">Add</button></div></div>
+      </article>
+      <article class="pc">
+        <div class="pim" style="background-image:url('https://images.unsplash.com/photo-1631730486784-715f3d4f1f1f?q=80&w=600&auto=format&fit=crop')"></div>
+        <div class="pb"><span class="pcat">Hair Tools</span><h3>BaBylissPRO VIBEFX Cordless Handheld Massager</h3>
+          <div class="st">★★★★☆ <small>4.7 (98)</small></div>
+          <div class="pf"><span class="pr">$59.99</span><button class="add">Add</button></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="wrap vrow">
+    <div class="v"><span class="vi">🚚</span><div><b>Free U.S. shipping</b><span>On every order over $59</span></div></div>
+    <div class="v"><span class="vi">🏬</span><div><b>Local pickup</b><span>Ready same day in Chattanooga</span></div></div>
+    <div class="v"><span class="vi">✔️</span><div><b>Authentic brands</b><span>Andis, BaBylissPRO, Wahl &amp; more</span></div></div>
+    <div class="v"><span class="vi">💬</span><div><b>Real beauty advice</b><span>Ask our in-store team anytime</span></div></div>
+  </div>
+</section>
+
+<!-- LOCAL -->
+<section><div class="wrap local">
+  <div class="lmap">Chattanooga, TN</div>
+  <div>
+    <div class="eyebrow">Visit us</div>
+    <h2>Your beauty supply store in Chattanooga</h2>
+    <p>Come browse the full range in person, or order online and pick up the same day. Serving Chattanooga and shipping across the United States.</p>
+    <div class="infoline"><span class="ii">📍</span><div><b>[Store address], Chattanooga, TN [ZIP]</b></div></div>
+    <div class="infoline"><span class="ii">🕘</span><div>Mon–Sat 10am–7pm · Sun 12pm–5pm</div></div>
+    <div class="infoline"><span class="ii">📞</span><div>[Your phone number]</div></div>
+    <a href="#" class="btn" style="margin-top:10px">Get directions</a>
+  </div>
+</div></section>
+
+<!-- BRANDS -->
+<section class="brands" style="padding:30px 0">
+  <div class="wrap brow"><span>ANDIS</span><span>BaBylissPRO</span><span>WAHL</span><span>OUTRE</span><span>X-Pression</span><span>RED by Kiss</span></div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="news"><div class="wrap">
+  <div class="eyebrow" style="justify-content:center">Stay in the loop</div>
+  <h2 style="font-size:clamp(24px,3vw,34px)">New arrivals &amp; member deals</h2>
+  <p style="color:var(--muted)">Join for early access to new wigs, restocks, and Chattanooga in-store events.</p>
+  <form onsubmit="event.preventDefault(); this.reset(); alert('Thanks for subscribing! (demo)');">
+    <input type="email" placeholder="you@email.com" required aria-label="Email">
+    <button class="btn" type="submit">Subscribe</button>
+  </form>
+</div></section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="brand">Luxury Beauty Supply<small>Chattanooga, TN</small></div>
+        <p style="max-width:280px;margin-top:12px;font-size:14px">Wigs, braiding hair, bundles, lashes, barber supplies, and beauty essentials. In-store and shipping nationwide.</p>
+      </div>
+      <div><h4>Shop</h4><ul><li><a href="#">Wigs</a></li><li><a href="#">Braiding Hair</a></li><li><a href="#">Bundles</a></li><li><a href="#">Barber Supplies</a></li></ul></div>
+      <div><h4>Help</h4><ul><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Track order</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div><h4>Visit</h4><ul><li>Chattanooga, TN</li><li>Mon–Sat 10–7</li><li>Local pickup</li></ul></div>
+    </div>
+    <div class="fbar"><span>© 2026 Luxury Beauty Supply · Design refresh mockup</span><span>Privacy · Terms</span></div>
+  </div>
+</footer>
+
+<div class="demo-flag">Design refresh mockup · not the live site</div>
+</body>
+</html>
